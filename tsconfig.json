@@ -11,5 +11,5 @@
       "@pinia/nuxt",
       "unplugin-icons/types/vue"
     ]
-  }
+  },
 }
