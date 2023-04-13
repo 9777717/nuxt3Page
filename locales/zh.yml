@@ -7,6 +7,8 @@ components:
 pages:
   index:
     title: nuxt 3[]awesome[]starter
+    whatsApp: whatsApp
+    inquire: 電話查詢
   404:
     title: 找不到该页面
   blank:
@@ -63,6 +65,41 @@ pages:
     index:
       nav: 主页
       title: 主页
+  content:
+    eyeIcon:
+      eyeIcon1: 視力及屈光度數檢查
+      eyeIcon2: 視力及屈光度數檢查
+      eyeIcon3: 色弱/色盲檢查
+      eyeIcon4: 立體視覺檢查
+      eyeIcon5: 青光眼篩查(眼壓)
+      eyeIcon6: 眼乾及淚水測試
+      eyeIcon7: 視野檢查
+      eyeIcon8: 眼球結構斷層掃描(OCT)
+      eyeIcon9: 視網膜掃描攝影(SLO)
+      eyeIcon10: 眼軸檢查
+      eyeIcon11: 角膜健康檢查
+      eyeIcon12: 眼角膜地形圖分析
+      eyeIcon13: 驗配眼鏡
+      eyeIcon14: 漸進眼鏡
+      eyeIcon15: 近視控制眼鏡
+      eyeIcon16: 多焦點式隱形眼鏡(老花)
+      eyeIcon17: 角膜矯形鏡
+      eyeIcon18: MiSight 1 Day近視控制隱形眼鏡
+      eyeIcon19: 鞏膜
+    eyeServe:
+      eyeServe1:	角膜矯形鏡合適性檢查套餐
+      eyeServe2:	兒童眼睛檢查套餐
+      eyeServe3:	成人眼睛檢查套餐
+      eyeServe4:	親友眼睛檢查計劃
+      eyeServe5:	隱形眼鏡驗配套餐
+      eyeServe6:	青光眼檢查套餐
+      eyeServe7:	驗配眼鏡
+      eyeServe8:	老花隱形眼鏡檢查及試戴套餐
+      eyeServe9:	RGP鏡適配性檢查套餐
+      eyeServe10:	其他
+    title:
+      titleDiscounts: 專享優惠
+    nav: 555
 banners:
   welcome: 你好, 欢迎来到 %{app_name}!
 others:
@@ -70,3 +107,50 @@ others:
   copy: 复制
   enabled: 启用
   disabled: 禁用
+footer:
+  aboutUs:
+    aboutUs: 關於我們
+    Hema: 希瑪視光
+  Exclusive:
+    Exclusive: 專享優惠
+  Myopia: 
+    Myopia: 近視控制方案
+    Orthokeratoplasty: 角膜矯形術
+    controlOptics: 近視控制光學鏡片
+    MiSight: MiSight®隱形眼鏡
+  Optician: 
+    Optician: 配鏡服務
+    Progressive: 漸進鏡
+    Presbyopia: 多焦點式隱形眼鏡(老花)
+    HardLenses:  硬性隱形眼鏡
+  optometry:  
+    optometry:  視光檢查
+    Comprehensive: 綜合檢查
+    MyopicControlTest: 近視控制檢查
+    lensFitting: 隱形眼鏡驗配
+    Glaucoma: 青光眼篩查
+  Service: 
+    Service: 服務內容
+    ServicesList: 服務一覽
+    ServicesCharge: 服務收費
+    VoucherScheme: 長者醫療券計劃
+  sharing: 
+    sharing: 用戶分享
+  EyeKnowledge: 
+    EyeKnowledge: 護眼知識
+    LittleEye: 護眼小教室
+    childrenEye: 兒童視覺發展
+    CommonEye: 常見的眼睛問題
+  ContactUs:  
+    ContactUs: 聯絡我們
+  copyright:
+    conditions: 條款細則
+    manage: 希瑪眼科視光中心
+    copyright: 版權所有
+    Privacy: 私隱政策
+  map: 
+    mapIsLand: 港島
+    Kowloon: 九龍
+    Territories: 新界
+    YalanMong: 旺角雅蘭
+    MongKok: 旺角
