@@ -67,24 +67,24 @@ pages:
       title: 主页
   content:
     eyeIcon:
-      eyeIcon1: 視力及屈光度數檢查
-      eyeIcon2: 視力及屈光度數檢查
+      eyeIcon1: 視力及屈<br />光度數檢查
+      eyeIcon2: 雙眼協調<br />及斜視檢查
       eyeIcon3: 色弱/色盲檢查
       eyeIcon4: 立體視覺檢查
-      eyeIcon5: 青光眼篩查(眼壓)
-      eyeIcon6: 眼乾及淚水測試
+      eyeIcon5: 青光眼篩查<br />(眼壓)
+      eyeIcon6: 眼乾及淚水<br />測試
       eyeIcon7: 視野檢查
-      eyeIcon8: 眼球結構斷層掃描(OCT)
-      eyeIcon9: 視網膜掃描攝影(SLO)
+      eyeIcon8: 眼球結構斷層<br />掃描(OCT)
+      eyeIcon9: 視網膜掃描<br />攝影(SLO)
       eyeIcon10: 眼軸檢查
       eyeIcon11: 角膜健康檢查
-      eyeIcon12: 眼角膜地形圖分析
+      eyeIcon12: 眼角膜<br />地形圖分析
       eyeIcon13: 驗配眼鏡
       eyeIcon14: 漸進眼鏡
       eyeIcon15: 近視控制眼鏡
-      eyeIcon16: 多焦點式隱形眼鏡(老花)
+      eyeIcon16: 多焦點式<br />隱形眼鏡(老花)
       eyeIcon17: 角膜矯形鏡
-      eyeIcon18: MiSight 1 Day近視控制隱形眼鏡
+      eyeIcon18: MiSight 1 Day<br />近視控制隱形<br />眼鏡
       eyeIcon19: 鞏膜
     eyeServe:
       eyeServe1:	角膜矯形鏡合適性檢查套餐

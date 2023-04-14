@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 defineProps({
-  text: {
+  text_l: {
+    type: String,
+    default: '',
+  },
+  text_r: {
     type: String,
     default: '',
   },
@@ -8,7 +12,49 @@ defineProps({
 </script>
 
 <template>
-  <div class="text-4xl font-bold">
+  <!-- <div class="text-4xl font-bold">
     <slot>{{ text }}</slot>
+  </div> -->
+  <div class="iconHeader">
+    <div>
+      <span>{{ text_l }}</span>
+    </div>
+    <div>{{ text_r }}</div>
   </div>
 </template>
+<style scoped>
+.iconHeader {
+  margin: 83px auto 43px auto;
+  /* PC-Title */
+
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  /* 白色 */
+
+  color: #3e5270;
+}
+
+.iconHeader > div:nth-child(1) {
+  position: relative;
+  width: 91px;
+  height: 48px;
+  background: #00a4ce;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.iconHeader > div:nth-child(1) > span {
+  color: #ffffff;
+  position: absolute;
+  left: 2px;
+  bottom: 0px;
+}
+</style>

@@ -15,6 +15,7 @@
   width: 100%;
   height: 84px;
 }
+
 .bg {
   background: #f2fcff;
 }
