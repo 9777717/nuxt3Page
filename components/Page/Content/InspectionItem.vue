@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Title from '../Title'
 const { t } = useLang()
 const arrImage = [
   {
@@ -81,7 +80,7 @@ const arrImage = [
 ]
 </script>
 <template>
-  <Title :text_l="'服務'" :text_r="'內容'" />
+  <PageTitle :text_l="'服務'" :text_r="'內容'" />
   <div class="InspectionItem flex flex-col">
     <div class="flex flex-col serve">
       <div class="flex flex-row items-center justify-center">

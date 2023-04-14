@@ -32,8 +32,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
+    'nuxt-swiper',
   ],
-
   // experimental features
   experimental: {
     reactivityTransform: false,

@@ -1,6 +1,7 @@
 <template>
   <div class="bg flex justify-center">
     <div class="bg-w">
+      <PageContentMirrorMatching />
       <PageContentInfluenceCheck />
       <PageContentInspectionItem />
       <PageContentImageAd />
