@@ -62,6 +62,7 @@ const modules = [Navigation, Pagination]
 
 <style lang="scss" scoped>
 .InfluenceCheck {
+  margin-bottom: 66px;
   position: relative;
 }
 .swiperbg {
@@ -159,6 +160,72 @@ const modules = [Navigation, Pagination]
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+</style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .swiperbg {
+    display: none;
+  }
+  .swiperNav {
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 27px;
+    background: rgba($color: #000000, $alpha: 0);
+  }
+  .swiperBox {
+    width: 350px;
+    height: 585px;
+    background: #fff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-top: 27px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgLeft {
+    width: 297px !important;
+  }
+  .swiper-slide {
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+  .iconText {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .swiperText {
+    margin: 0;
+  }
+  :deep(.swiper-button-next::after) {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: url(https://static.cmereye.com/imgs/2023/04/19843bfd002224b3.png);
+  }
+  :deep(.swiper-button-prev::after) {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: url(https://static.cmereye.com/imgs/2023/04/19843bfd002224b3.png);
+    transform: rotate(-180deg);
+  }
+  :deep(
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal
+    ) {
+    bottom: -5px;
+  }
+  :deep(.swiper-pagination-bullet) {
+    width: 19px;
+    height: 19px;
+    border-radius: 100%;
+  }
+  :deep(.swiper-pagination-bullet-active) {
+    background: #00a4ec;
+  }
 }
 </style>
 <!-- 

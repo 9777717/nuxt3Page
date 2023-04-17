@@ -50,7 +50,7 @@ const toggleOptions = (show?: boolean) => {
 
 <template>
   <div ref="navbar" class="bg-bule flex flex-row flex-nowrap">
-    <div class="pl-12 py-4">
+    <div class="lgLogo pl-12 py-4">
       <NuxtLink tag="a" :to="{ name: 'index' }">
         <img
           class="logo_link"
@@ -58,11 +58,22 @@ const toggleOptions = (show?: boolean) => {
         />
       </NuxtLink>
     </div>
-    <div class="py-4 advMsg">
+    <div class="smLogo">
+      <NuxtLink tag="a" :to="{ name: 'index' }">
+        <img
+          class="nanBarLogo"
+          src="https://static.cmereye.com/imgs/2023/04/3fe84f0b91cd78e1.png"
+        />
+      </NuxtLink>
+    </div>
+    <div class="lgLogo py-4 advMsg">
       <img
         class="adv"
         src="https://static.cmereye.com/imgs/2023/04/3921bef7289ff4d9.png"
       />
+    </div>
+    <div class="smLogo advMsg">
+      <img src="https://static.cmereye.com/imgs/2023/04/33b24185cceb74f5.png" />
     </div>
     <div class="">
       <slot name="menu" />
@@ -115,9 +126,37 @@ html.dark {
 }
 
 .advMsg {
-  position: absolute;
-  width: 187px;
-  height: 58.37px;
-  left: 866px;
+  margin-left: 175px;
+}
+</style>
+<style lang="scss" scoped>
+@media (min-width: 768px) {
+  .smLogo {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .lgLogo {
+    display: none;
+  }
+  .bg-bule {
+    padding: 12px 14px;
+    width: 100vw;
+    height: 64px;
+  }
+  .smLogo {
+    display: block;
+  }
+  .advMsg {
+    margin-left: 0;
+    margin-right: 50px;
+  }
+  .nanBarLogo {
+    margin: 0;
+  }
+  .logo_link {
+    width: 190px;
+    height: 40px;
+  }
 }
 </style>

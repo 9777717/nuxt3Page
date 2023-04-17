@@ -166,3 +166,11 @@ const slider = [
   }
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .MirrorMatching {
+    margin-top: 26px;
+    margin-bottom: 66px;
+  }
+}
+</style>

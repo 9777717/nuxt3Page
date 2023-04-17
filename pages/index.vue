@@ -20,3 +20,14 @@
   background: #f2fcff;
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .navbar {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 64px;
+  }
+}
+</style>

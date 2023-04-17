@@ -7,3 +7,10 @@
   font-size: 5em;
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .Form {
+    font-size: 28px;
+  }
+}
+</style>

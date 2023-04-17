@@ -14,34 +14,71 @@ const { t } = useLang()
 </template>
 
 <style scoped lang="scss">
-.IamgeAd {
-  margin-top: 57px;
-}
-.IamgeAd > div:nth-child(1) {
-  width: 100%;
-  height: 8px;
-  background: #00a4ce;
-}
-.IamgeAd > div:nth-child(2) {
-  background-color: #ffee54;
-  width: 100%;
-  height: 67px;
+@media (min-width: 768px) {
+  .IamgeAd {
+    margin-top: 57px;
+  }
+  .IamgeAd > div:nth-child(1) {
+    width: 100%;
+    height: 8px;
+    background: #00a4ce;
+  }
+  .IamgeAd > div:nth-child(2) {
+    background-color: #ffee54;
+    width: 100%;
+    height: 67px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .IamgeAd > div:nth-child(2) > span {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    /* Turquoise */
+
+    color: #00a4ce;
+  }
 }
-.IamgeAd > div:nth-child(2) > span {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 54px;
-  text-align: center;
-  letter-spacing: 0.1em;
+</style>
 
-  /* Turquoise */
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .IamgeAd {
+    margin-top: 57px;
+  }
+  .IamgeAd > div:nth-child(1) {
+    width: 100%;
+    height: 6px;
+    background: #00a4ce;
+  }
+  .IamgeAd > div:nth-child(2) {
+    background-color: #ffee54;
+    width: 100%;
+    height: 36px;
 
-  color: #00a4ce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .IamgeAd > div:nth-child(2) > span {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    /* Turquoise */
+
+    color: #00a4ce;
+  }
 }
 </style>

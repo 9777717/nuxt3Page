@@ -125,6 +125,7 @@ const { t } = useLang()
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29531.42797392747!2d114.14283751814892!3d22.29962865616729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401ae16f16839%3A0x3942ab0fd827016f!2z5biM55Gq55y856eR6KaW5YWJ5Lit5b-DIC0g5pe66KeS!5e0!3m2!1szh-CN!2ssg!4v1681190999916!5m2!1szh-CN!2ssg"
             width="375"
             height="268"
+            class="iframeSm"
             style="border: 0"
             allowfullscreen="true"
             loading="lazy"
@@ -134,114 +135,248 @@ const { t } = useLang()
       </div>
     </div>
   </div>
+  <PageSmfooter />
 </template>
 
 <style scoped lang="scss">
-.map {
-  background: #f2fcff;
+@media (min-width: 768px) {
+  .map {
+    background: #f2fcff;
+  }
+
+  .map_header {
+    background: #aad4e5;
+  }
+
+  .map_font {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* White */
+
+    color: #ffffff;
+  }
+
+  .map_font:active {
+    color: #3e5270;
+  }
+
+  .map_font:link {
+    color: #3e5270;
+  }
+
+  .map_header > span {
+    font-size: 40px;
+    font-weight: 100;
+    color: #ffffff;
+  }
+
+  .map_footer {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #a9a9a9;
+  }
+
+  .map_footer:active {
+    color: #00a4ce;
+  }
+
+  .map_footer:link {
+    color: #00a4ce;
+  }
+  .map_footer:hover {
+    color: #00a4ce;
+  }
+  .map_footer + span {
+    font-size: 40px;
+    font-weight: 200;
+    color: #a9a9a9;
+    margin: 0 2.8rem;
+  }
+
+  .rectangle {
+    height: 493px;
+    width: 884px;
+    background: #ffffff;
+  }
+  .title-font {
+    /* PC-Title */
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: 0.1em;
+
+    /* Dark Grey */
+
+    color: #3e5270;
+  }
+  .font-h5 {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #3e5270;
+  }
+
+  .mapFont {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #3e5270;
+  }
 }
+</style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .map {
+    background: #f2fcff;
+  }
 
-.map_header {
-  background: #aad4e5;
-}
+  .map_header {
+    height: 52px;
+    background: #aad4e5;
+  }
 
-.map_font {
-  font-family: 'ABeeZee';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
-  /* identical to box height */
+  .map_font {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    /* identical to box height */
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  /* White */
+    /* White */
 
-  color: #ffffff;
-}
+    color: #ffffff;
+  }
 
-.map_font:active {
-  color: #3e5270;
-}
+  .map_font:active {
+    color: #3e5270;
+  }
 
-.map_font:link {
-  color: #3e5270;
-}
+  .map_font:link {
+    color: #3e5270;
+  }
 
-.map_header > span {
-  font-size: 40px;
-  font-weight: 100;
-  color: #ffffff;
-}
+  .m-6 {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  .pt-30 {
+    padding: 0;
+  }
+  .map_header > span {
+    font-size: 40px;
+    font-weight: 100;
+    color: #ffffff;
+  }
 
-.map_footer {
-  font-family: 'ABeeZee';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
+  .map_footer {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    /* or 200% */
 
-  color: #a9a9a9;
-}
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
 
-.map_footer:active {
-  color: #00a4ce;
-}
+    color: #a9a9a9;
+  }
 
-.map_footer:link {
-  color: #00a4ce;
-}
-.map_footer:hover {
-  color: #00a4ce;
-}
-.map_footer + span {
-  font-size: 40px;
-  font-weight: 200;
-  color: #a9a9a9;
-  margin: 0 2.8rem;
-}
+  .map_footer:active {
+    color: #00a4cf;
+  }
 
-.rectangle {
-  height: 493px;
-  width: 884px;
-  background: #ffffff;
-}
-.title-font {
-  /* PC-Title */
+  .map_footer:link {
+    color: #00a4cf;
+  }
+  .map_footer:hover {
+    color: #00a4cf;
+  }
+  .map_footer + span {
+    font-size: 24px;
+    font-weight: 200;
+    color: #a9a9a9;
+    margin: 0 22px;
+  }
 
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 54px;
-  letter-spacing: 0.1em;
+  .rectangle {
+    margin-top: 30px;
+    padding: 5px 15px;
+    width: 374px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  .title-font {
+    /* PC-Title */
 
-  /* Dark Grey */
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: 0.1em;
 
-  color: #3e5270;
-}
-.font-h5 {
-  font-family: 'ABeeZee';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  /* identical to box height, or 150% */
+    /* Dark Grey */
 
-  color: #3e5270;
-}
+    color: #3e5270;
+  }
+  .font-h5 {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
 
-.mapFont {
-  font-family: 'ABeeZee';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  /* identical to box height, or 150% */
+    color: #3e5270;
+  }
 
-  color: #3e5270;
+  .mapFont {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #3e5270;
+  }
+  .iframeSm {
+    width: 344px;
+    height: 252px;
+  }
 }
 </style>

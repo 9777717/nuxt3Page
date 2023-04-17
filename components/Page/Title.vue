@@ -58,3 +58,37 @@ defineProps({
   bottom: 0px;
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .iconHeader {
+    margin: 0;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    /* 白色 */
+
+    color: #3e5270;
+  }
+  .iconHeader > div:nth-child(1) {
+    position: relative;
+    width: 56px;
+    height: 34px;
+    background: #00a4ce;
+    box-sizing: border-box;
+    margin-top: 0;
+  }
+  .iconHeader > div:nth-child(1) > span {
+    color: #ffffff;
+  }
+  .iconHeader > div:nth-child(2) {
+    margin-left: 2px;
+  }
+}
+</style>

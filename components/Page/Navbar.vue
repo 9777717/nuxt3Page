@@ -26,7 +26,7 @@ const menus = computed((): IMenuItem[] => [
   <BuilderNavbar>
     <template #menu>
       <div class="right_text">
-        <div class="text space-x-4 flex items-center">
+        <div class="textWhats space-x-4 flex items-center">
           <div class="text_whats">
             <img
               src="https://static.cmereye.com/imgs/2023/04/bbd64119a071aecd.png"
@@ -90,7 +90,7 @@ const menus = computed((): IMenuItem[] => [
   padding-right: 4px;
 }
 
-.text > div {
+.textWhats > div {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -125,6 +125,23 @@ const menus = computed((): IMenuItem[] => [
     img {
       width: 22px;
       height: 18px;
+    }
+  }
+}
+</style>
+
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .right_text {
+    .textWhats {
+      display: none;
+    }
+    .img {
+      padding: 12px 0;
+      img {
+        width: 22px;
+        height: 18px;
+      }
     }
   }
 }

@@ -117,132 +117,284 @@ const arrImage = [
 </template>
 
 <style scoped lang="scss">
-.InspectionItem {
-  position: relative;
-  text-align: center;
-  background: #ffffff;
-  padding: 18px 33px 69px 33px;
-}
-.serve {
-  padding: 0 4.5px;
-}
+@media (min-width: 768px) {
+  .InspectionItem {
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    padding: 18px 33px 69px 33px;
+  }
+  .serve {
+    padding: 0 4.5px;
+  }
 
-.iconLogo {
-  margin-top: 10px;
-  margin-right: 37px;
+  .iconLogo {
+    margin-top: 10px;
+    margin-right: 37px;
+  }
+
+  .iconText {
+    position: relative;
+    margin-left: 37px;
+    padding: 0 10px;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    /* Turquoise */
+
+    color: #00a4ce;
+    border-bottom: 9px solid #ffee54;
+  }
+  .eyeBox {
+    width: 839px;
+    margin: 25px 0 69.5px 0;
+  }
+  .eyeIcon {
+    display: flex;
+    width: 156.44px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0px 0 34px 0;
+  }
+
+  .eyeImg {
+    width: 100px;
+    height: 100px;
+  }
+  .eyeIext {
+    margin-top: 9px;
+    height: 65.18px;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20.858px;
+    line-height: 31px;
+    /* or 150% */
+
+    text-align: center;
+
+    /* Dark Grey */
+
+    color: #3e5270;
+  }
+  .btn {
+    margin: 33px 190px auto 190px;
+  }
+  .eyeBnt1 {
+    cursor: pointer;
+    height: 49px;
+    width: 210px;
+    background: #00a4ce;
+    border-radius: 29px;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    /* identical to box height, or 200% */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Turquoise */
+
+    color: #ffffff;
+    margin-right: 74px;
+  }
+  .eyeBnt2 {
+    cursor: pointer;
+    width: 138px;
+    height: 49px;
+    background: #ffee54;
+    border-radius: 29px;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    /* identical to box height, or 200% */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Turquoise */
+
+    color: #00a4ce;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #ffffff;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+  }
+  .triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #00a4ce;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+  }
 }
+</style>
+<style lang="scss" scoped>
+@media (max-width: 768px) {
+  .InspectionItem {
+    width: 350px;
+    margin: auto;
+    margin-top: 21px;
+    margin-bottom: 65px;
+    /* 白色 */
 
-.iconText {
-  position: relative;
-  margin-left: 37px;
-  padding: 0 10px;
+    background: #ffffff;
+    /* Soft Shadow */
 
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 34px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.1em;
-  /* Turquoise */
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  .serve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .serve > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconText {
+    position: relative;
+    margin: 17px 0;
+    padding: 0 10px;
 
-  color: #00a4ce;
-  border-bottom: 9px solid #ffee54;
-}
-.eyeBox {
-  width: 839px;
-  margin: 25px 0 69.5px 0;
-}
-.eyeIcon {
-  display: flex;
-  width: 156.44px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 0px 4.5px 44.2px 4.5px;
-}
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    /* Turquoise */
 
-.eyeImg {
-  width: 100px;
-  height: 100px;
-}
-.eyeIext {
-  margin-top: 9px;
-  height: 65.18px;
-  font-family: 'Noto Sans CJK TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20.858px;
-  line-height: 31px;
-  /* or 150% */
+    color: #00a4ce;
+    border-bottom: 9px solid #ffee54;
+  }
+  .iconLogo {
+    margin-top: 37px;
+  }
+  .eyeBox > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .eyeIcon {
+    display: flex;
+    width: 104px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0px 4.5px 44.2px 4.5px;
+  }
+  .eyeImg {
+    width: 76px;
+    height: 76px;
+  }
+  .eyeIext {
+    width: 120px;
+    height: 50px;
+    /* Service List */
 
-  text-align: center;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
 
-  /* Dark Grey */
+    text-align: center;
 
-  color: #3e5270;
-}
-.btn {
-  margin: 33px 190px auto 190px;
-}
-.eyeBnt1 {
-  cursor: pointer;
-  height: 49px;
-  width: 210px;
-  background: #00a4ce;
-  border-radius: 29px;
-  font-family: 'Noto Sans CJK TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
-  /* identical to box height, or 200% */
+    /* Dark Grey */
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  /* Turquoise */
+    color: #3e5270;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 40px 70px;
+  }
+  .eyeBnt1 {
+    margin-top: 20px;
 
-  color: #ffffff;
-  margin-right: 74px;
-}
-.eyeBnt2 {
-  cursor: pointer;
-  width: 138px;
-  height: 49px;
-  background: #ffee54;
-  border-radius: 29px;
-  font-family: 'Noto Sans CJK TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
-  /* identical to box height, or 200% */
+    cursor: pointer;
+    height: 49px;
+    width: 210px;
+    background: #00a4ce;
+    border-radius: 29px;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    /* identical to box height, or 200% */
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  /* Turquoise */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Turquoise */
 
-  color: #00a4ce;
-}
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 14px solid #ffffff;
-  transform: matrix(0, -1, -1, 0, 0, 0);
-}
-.triangle1 {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 14px solid #00a4ce;
-  transform: matrix(0, -1, -1, 0, 0, 0);
+    color: #ffffff;
+    margin-right: 74px;
+  }
+  .eyeBnt2 {
+    cursor: pointer;
+    width: 210px;
+    height: 49px;
+    background: #ffee54;
+    border-radius: 29px;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    /* identical to box height, or 200% */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Turquoise */
+
+    color: #00a4ce;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #ffffff;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+  }
+  .triangle1 {
+    margin-left: 60px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #00a4ce;
+    transform: matrix(0, -1, -1, 0, 0, 0);
+  }
 }
 </style>

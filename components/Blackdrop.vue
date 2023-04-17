@@ -19,3 +19,11 @@
   width: 884px;
 }
 </style>
+
+<style lang="scss" scoped>
+@media (max-width: 766px) {
+  .bg-w {
+    width: 100vw;
+  }
+}
+</style>

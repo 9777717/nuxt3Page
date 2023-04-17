@@ -72,6 +72,10 @@ export default defineConfig({
     ],
   },
   theme: {
+    screens: {
+      sm: { min: '414px', max: '767px' },
+      md: { min: '768px' },
+    },
     extend: {
       maxWidth: {
         '8xl': '90rem',

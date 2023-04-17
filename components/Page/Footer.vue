@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { AppConfigInput } from '@nuxt/schema'
-import p from './../../package.json'
 const currentYear: number = new Date().getFullYear()
 const { t } = useLang()
 const app = useAppConfig() as AppConfigInput
@@ -9,7 +8,7 @@ const app = useAppConfig() as AppConfigInput
 <template>
   <PageMapMsg />
   <footer
-    class="flex flex-col px-61 py-25 border-t lg:border-gray-900/10 dark:border-gray-50/[0.2]"
+    class="footer flex flex-col px-61 py-25 border-t lg:border-gray-900/10 dark:border-gray-50/[0.2]"
   >
     <section class="px-4 lg:px-8 flex-1 flex w-full space-x-20">
       <div
@@ -162,30 +161,39 @@ const app = useAppConfig() as AppConfigInput
 </template>
 
 <style lang="scss" scoped>
-.footer_top > div > div {
-  font-family: 'Noto Sans CJK TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  /* identical to box height */
+@media (mix-width: 768px) {
+  .footer_top > div > div {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
 
-  letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
 
-  /* Turquoise */
+    /* Turquoise */
 
-  color: #00a4ce;
+    color: #00a4ce;
+  }
+  .footer_top > div > ul > li {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 44px;
+    /* identical to box height, or 218% */
+
+    /* Dark Grey */
+
+    color: #3e5270;
+  }
 }
-.footer_top > div > ul > li {
-  font-family: 'ABeeZee';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 44px;
-  /* identical to box height, or 218% */
-
-  /* Dark Grey */
-
-  color: #3e5270;
+</style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .footer {
+    display: none;
+  }
 }
 </style>

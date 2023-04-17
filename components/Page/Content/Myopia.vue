@@ -1718,6 +1718,38 @@
         </div>
       </div>
     </div>
+    <div class="iconImgSm">
+      <div>
+        <img
+          src="https://static.cmereye.com/imgs/2023/04/e0d21c5555b3eab3.png"
+        />
+        <div></div>
+        <div class="opiaSm">
+          <p>光學鏡片</p>
+          <p>DIMS</p>
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://static.cmereye.com/imgs/2023/04/578348c1721ff749.png"
+        />
+        <div></div>
+        <div class="opiaSm">
+          <p>硬性隱形眼鏡</p>
+          <p>Ortho-K</p>
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://static.cmereye.com/imgs/2023/04/43758cae124406eb.png"
+        />
+        <div></div>
+        <div class="opiaSm">
+          <p>軟性隱形眼鏡</p>
+          <p>Misight</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -1798,5 +1830,87 @@
   /* Dark Grey */
 
   color: #3e5270;
+}
+</style>
+
+<style lang="scss" scoped>
+@media (min-width: 768px) {
+  .iconImgSm {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .Myopia {
+    margin-bottom: 40px;
+  }
+  .iconImg {
+    display: none;
+  }
+  .iconImgSm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 15px 20px;
+  }
+  .iconImgSm > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(2) {
+      border: 1px solid #aad4e5;
+      width: 100px;
+      margin: 15px 0;
+    }
+  }
+
+  .opiaSm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .iconHeader {
+    margin: 20px 0;
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    /* 白色 */
+
+    color: #ffffff;
+  }
+  .iconHeader > div:nth-child(1) {
+    position: relative;
+    width: 110px;
+    height: 36px;
+    background: #00a4ce;
+    box-sizing: border-box;
+  }
+  .iconHeader > div:nth-child(2) {
+    color: #3e5270;
+  }
+  .opiaSm {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Dark Grey */
+
+    color: #3e5270;
+  }
 }
 </style>
