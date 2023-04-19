@@ -4,6 +4,7 @@
     <PageContent />
     <Blackdrop />
     <PageFooter />
+    <PageSmfooter />
   </div>
 </template>
 

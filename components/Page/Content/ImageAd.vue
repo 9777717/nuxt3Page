@@ -17,6 +17,7 @@ const { t } = useLang()
 @media (min-width: 768px) {
   .IamgeAd {
     margin-top: 57px;
+    margin-bottom: 55px;
   }
   .IamgeAd > div:nth-child(1) {
     width: 100%;
@@ -52,6 +53,7 @@ const { t } = useLang()
 @media (max-width: 767px) {
   .IamgeAd {
     margin-top: 57px;
+    margin-bottom: 53px;
   }
   .IamgeAd > div:nth-child(1) {
     width: 100%;

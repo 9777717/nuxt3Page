@@ -37,6 +37,13 @@
 <style lang="scss" scoped>
 @media (max-width: 767px) {
   .SmFooter {
+    z-index: 99999;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .SmFooter {
     margin-top: 120px;
     display: flex;
     width: 100vw;
@@ -70,7 +77,7 @@
 </style>
 <style lang="scss" scoped>
 @media (min-width: 768px) {
-  .box {
+  .SmFooter {
     display: none;
   }
 }

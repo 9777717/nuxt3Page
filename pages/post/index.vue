@@ -22,6 +22,7 @@ useHead(() => ({
 <template>
   <PageWrapper>
     <PageHeader>
+      asdaskdopkopdkasopdkasopdkaopsdkop
       <PageTitle :text="$t('pages.post.title')" class="capitalize" />
     </PageHeader>
     <PageBody>

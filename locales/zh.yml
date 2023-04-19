@@ -66,6 +66,16 @@ pages:
       nav: 主页
       title: 主页
   content:
+    form:
+      name: 姓名 
+      tel: 聯絡電話  
+      email: 電郵地址  
+      address: 選擇門診地點  
+      FromMe: 從哪裡找到我們網站？ 
+      checkServe: 請選擇服務 
+      sms: 訊息 
+      submit: 遞交
+
     eyeIcon:
       eyeIcon1: 視力及屈<br />光度數檢查
       eyeIcon2: 雙眼協調<br />及斜視檢查

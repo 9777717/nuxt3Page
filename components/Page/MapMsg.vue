@@ -135,7 +135,6 @@ const { t } = useLang()
       </div>
     </div>
   </div>
-  <PageSmfooter />
 </template>
 
 <style scoped lang="scss">

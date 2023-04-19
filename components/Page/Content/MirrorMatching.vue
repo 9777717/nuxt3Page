@@ -172,5 +172,19 @@ const slider = [
     margin-top: 26px;
     margin-bottom: 66px;
   }
+  .MirrorMatching {
+    & > div {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+  }
+  .slider {
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 </style>
