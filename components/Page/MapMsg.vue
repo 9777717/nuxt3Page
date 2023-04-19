@@ -210,6 +210,8 @@ const { t } = useLang()
     height: 493px;
     width: 884px;
     background: #ffffff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
   .title-font {
     /* PC-Title */

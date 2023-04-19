@@ -123,6 +123,8 @@ const arrImage = [
     text-align: center;
     background: #ffffff;
     padding: 18px 33px 69px 33px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
   .serve {
     padding: 0 4.5px;

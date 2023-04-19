@@ -175,6 +175,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     border-radius: 5px;
     margin: 0 auto;
     padding: 20px 36px 30px 40px;
+    margin-bottom: 94px;
   }
   .iconHeader {
     margin: 20px 0;

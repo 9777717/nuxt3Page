@@ -65,6 +65,10 @@ const modules = [Navigation, Pagination]
   margin-bottom: 66px;
   position: relative;
 }
+.swiper {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
 .swiperbg {
   height: 440px;
   width: 1286px;

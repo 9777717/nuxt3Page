@@ -1800,6 +1800,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 .iconImg {
   & > div:nth-child(1) {
