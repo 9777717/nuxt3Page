@@ -79,18 +79,18 @@ export default defineNuxtConfig({
   },
 
   // windicss
-  windicss: {
-    analyze: {
-      analysis: {
-        interpretUtilities: false,
-      },
-      server: {
-        port: 4000,
-        open: false,
-      },
-    },
-    scan: true,
-  },
+  // windicss: {
+  //   analyze: {
+  //     analysis: {
+  //       interpretUtilities: false,
+  //     },
+  //     server: {
+  //       port: 4000,
+  //       open: false,
+  //     },
+  //   },
+  //   scan: true,
+  // },
 
   // content
   content: {

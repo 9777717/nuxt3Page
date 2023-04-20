@@ -1,5 +1,10 @@
 <template>
   <div class="banner flex-1 w-full flex flex-col">
+    <img
+      src="https://static.cmereye.com/imgs/2023/04/3bbca41eecbd1883.png"
+      alt=""
+      srcset=""
+    />
     <div class="min-h-full first_page">
       <div class="bg_peomi transform motion-safe:hover:scale-105">
         <img
@@ -44,10 +49,11 @@
 </template>
 
 <style lang="scss" scoped>
-.banner {
-  height: 1080px;
-  background: url('https://static.cmereye.com/imgs/2023/04/3bbca41eecbd1883.png');
-}
+// .banner {
+//   height: 1080px;
+//   background: url('https://static.cmereye.com/imgs/2023/04/3bbca41eecbd1883.png');
+//   background-size: 100% 100%;
+// }
 .first_page {
   display: flex;
   flex-direction: row;

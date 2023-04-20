@@ -15,13 +15,19 @@
 // .bg {
 //   background: #f2fcff;
 // }
-.bg-w {
-  width: 884px;
+@media (min-width: 768px) {
+  .bg {
+    overflow: hidden;
+  }
+  .bg-w {
+    width: 884px;
+    margin: auto;
+  }
 }
 </style>
 
 <style lang="scss" scoped>
-@media (max-width: 766px) {
+@media (max-width: 767px) {
   .bg-w {
     width: 100vw;
   }

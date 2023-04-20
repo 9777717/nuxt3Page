@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
+import { number } from '@intlify/core-base'
 const { t } = useLang()
 
 const formSize = ref('default')
@@ -19,7 +20,7 @@ const cities = [
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive({
   name: '',
-  tel: '+852',
+  tel: +852,
   email: '',
   address: '',
   FromMe: '',
@@ -29,8 +30,7 @@ const ruleForm = reactive({
 const telValidator = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error('請輸入手機號'))
-  } else if (!/^(\+?0?852\/-?)\d{8}$/.test(value)) {
-    console.log(value, '456465')
+  } else if (value.length < 11 || value.length > 11) {
     callback(new Error('手機號格式不正確'))
   } else {
     callback()
@@ -104,7 +104,11 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         <el-input v-model="ruleForm.name" clearable placeholder="請輸入姓名" />
       </el-form-item>
       <el-form-item :label="t('pages.content.form.tel')" prop="tel">
-        <el-input v-model="ruleForm.tel" clearable placeholder="請輸入手機號" />
+        <el-input
+          v-model.number="ruleForm.tel"
+          clearable
+          placeholder="請輸入手機號"
+        />
       </el-form-item>
       <el-form-item :label="t('pages.content.form.email')" prop="email">
         <el-input
@@ -150,8 +154,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         <el-input
           v-model="ruleForm.sms"
           type="textarea"
-          style="min-height: 40px"
-          :rows="2"
+          :rows="1"
           placeholder="請輸入詳細內容"
           clearable
         />
@@ -177,6 +180,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     padding: 20px 36px 30px 40px;
     margin-bottom: 94px;
   }
+
   .iconHeader {
     margin: 20px 0;
     margin-bottom: 43px;
@@ -200,6 +204,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     height: 54px;
     background: #00a4ce;
     box-sizing: border-box;
+
     & > span {
       margin-left: 6px;
     }
@@ -209,39 +214,49 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     color: #3e5270;
     margin-left: 2px;
   }
+
   :deep(.el-form) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
+
   :deep(.el-form-item) {
     width: 302px;
   }
+
   :deep(.el-form > div:nth-child(2n + 1)) {
     margin-right: 48px;
   }
+
   :deep(.el-form > div:nth-child(6)) {
-    width: 600px;
+    width: 656px;
   }
+
   :deep(.el-form > div:nth-child(7)) {
     width: 505px;
     height: 40px;
     margin-right: 0;
   }
+
   :deep(.el-form > div:last-child) {
     width: 120px;
     height: 40px;
     margin-right: 0;
-    margin-top: 26px;
+    margin-top: 36px;
     margin-left: 30px;
   }
+
   :deep(.el-select) {
     width: 100%;
   }
+
   :deep(.el-checkbox) {
     width: 268px;
+    margin-right: 0;
   }
+
   :deep(.el-button) {
     width: 120px;
     height: 40px;
@@ -259,10 +274,55 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     /* 白色 */
 
     color: #ffffff;
+
     & > span {
       margin-left: 18px;
     }
   }
+
+  :deep(.el-checkbox__label) {
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #3e5270;
+  }
+
+  :deep(.el-checkbox__input.is-checked + .el-checkbox__label) {
+    color: #3e5270;
+    // 00a4ce
+  }
+
+  :deep(.el-checkbox__inner) {
+    width: 24px;
+    height: 24px;
+    border-color: #ccc;
+    border-radius: 8px;
+    // 00a4ce
+  }
+
+  :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+    border-color: #00a4ce;
+    background-color: #00a4ce;
+  }
+
+  :deep(.el-checkbox__inner::after) {
+    box-sizing: content-box;
+    content: '';
+    border: 2px solid #fff;
+    border-left: 0;
+    border-top: 0;
+    height: 12px;
+    left: 7px;
+    position: absolute;
+    top: 2px;
+    transform: rotate(45deg) scaleY(0);
+    width: 5px;
+    transition: transform 0.15s ease-in 50ms;
+    transform-origin: center;
+  }
+
   :deep(.el-form-item__label) {
     font-family: 'Noto Sans CJK TC';
     font-style: normal;
@@ -282,18 +342,24 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     align-self: stretch;
     flex-grow: 0;
   }
+
   :deep(
       .el-form-item.is-required:not(.is-no-asterisk).asterisk-right
         > .el-form-item__label:after
     ) {
     color: #00a4ce;
   }
+  :deep(.el-checkbox-group > .el-checkbox:nth-child(2n + 1)) {
+    margin-right: 70px;
+  }
+
   :deep(.el-input__wrapper) {
     width: 302px;
     height: 40px;
     border: 1px solid #cccccc;
     border-radius: 8px;
   }
+
   :deep(.el-input__inner) {
     font-family: 'Noto Sans CJK TC';
     font-style: normal;
@@ -309,9 +375,11 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 
     color: #6ebcd2;
   }
+
   :deep(.el-form-item__content) {
     line-height: 44px;
   }
+
   :deep(.el-textarea__inner) {
     width: 505px;
     min-height: 40px;
@@ -323,6 +391,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     border-radius: 8px;
     color: #6ebcd2;
   }
+
   :deep(.el-input) {
     input {
       &::placeholder {
@@ -347,6 +416,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 
   :deep(.el-textarea) {
     textarea {
+      line-height: 36px;
       &::placeholder {
         font-family: 'Noto Sans CJK TC';
         font-style: normal;
