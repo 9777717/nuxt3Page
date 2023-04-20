@@ -1,6 +1,24 @@
+import { PageRhomboidTop } from '~~/.nuxt/components';
+
 <template>
-  <div class="bg flex justify-center">
-    <div class="bg-w">
+  <div class="blackdrop flex justify-center">
+    <PageRhomboidTop
+      :style-rhom="{
+        top: '520px',
+        height: '342px',
+        transform: 'skewY(348deg)',
+        background: '#fff',
+      }"
+    />
+    <PageRhomboidTop
+      :style-rhom="{
+        top: '2520px',
+        height: '342px',
+        transform: 'skewY(13deg)',
+        background: '#c2eaf2',
+      }"
+    />
+    <div class="blackdrop-w">
       <PageContentMyopia />
       <PageContentMirrorMatching />
       <PageContentInfluenceCheck />
@@ -12,14 +30,15 @@
 </template>
 
 <style lang="scss" scoped>
-// .bg {
-//   background: #f2fcff;
-// }
 @media (min-width: 768px) {
-  .bg {
+  .blackdrop {
     overflow: hidden;
+    width: 100%;
+    position: relative;
   }
-  .bg-w {
+
+  .blackdrop-w {
+    z-index: 100;
     width: 884px;
     margin: auto;
   }
@@ -28,7 +47,7 @@
 
 <style lang="scss" scoped>
 @media (max-width: 767px) {
-  .bg-w {
+  .blackdrop-w {
     width: 100vw;
   }
 }

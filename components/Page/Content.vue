@@ -114,7 +114,7 @@
   left: 50.83%;
   right: 47.77%;
   bottom: 14.11%;
-  top: 1000px;
+  top: 688px;
 }
 </style>
 <style lang="scss" scoped>
