@@ -23,14 +23,23 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-.blackdrop-rhomboidTop {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  top: 520px;
-  height: 342px;
-  transform: skewY(348deg);
-  background: #fff;
+@media (min-width: 767px) {
+  .blackdrop-rhomboidTop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    top: 520px;
+    height: 342px;
+    transform: skewY(348deg);
+    background: #fff;
+  }
+}
+</style>
+<style scoped lang="scss">
+@media (max-width: 767px) {
+  .rhomboidTop {
+    display: none;
+  }
 }
 </style>

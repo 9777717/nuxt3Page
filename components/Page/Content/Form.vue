@@ -177,7 +177,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     margin: 0 auto;
-    padding: 20px 36px 30px 40px;
+    padding: 30px 36px 30px 40px;
     margin-bottom: 94px;
   }
 

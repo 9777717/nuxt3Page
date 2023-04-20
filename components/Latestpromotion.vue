@@ -1,27 +1,15 @@
 <template>
+  <PageAdvertisingpicture />
   <div class="blackdrop flex justify-center">
     <PageRhomboidTop
       :style-rhom="{
-        top: '520px',
+        top: '220px',
         height: '342px',
         transform: 'skewY(348deg)',
         background: '#fff',
       }"
     />
-    <PageRhomboidTop
-      :style-rhom="{
-        top: '2520px',
-        height: '342px',
-        transform: 'skewY(13deg)',
-        background: '#c2eaf2',
-      }"
-    />
     <div class="blackdrop-w">
-      <PageContentMyopia />
-      <PageContentMirrorMatching />
-      <PageContentInfluenceCheck />
-      <PageContentInspectionItem />
-      <PageContentImageAd />
       <PageContentForm />
     </div>
   </div>
@@ -39,6 +27,9 @@
     z-index: 100;
     width: 884px;
     margin: auto;
+  }
+  .iconHeader {
+    margin-top: 0;
   }
 }
 </style>
