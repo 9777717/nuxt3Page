@@ -1754,92 +1754,92 @@
 </template>
 
 <style scoped lang="scss">
-.iconHeader {
-  margin: 60px auto 0 auto;
-  /* PC-Title */
-
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 0.1em;
-
-  /* 白色 */
-
-  color: #3e5270;
-}
-
-.iconHeader > div:nth-child(1) {
-  position: relative;
-  width: 178px;
-  height: 48px;
-  background: #00a4ce;
-  box-sizing: border-box;
-  margin-top: 5px;
-}
-.iconHeader > div:nth-child(1) > span {
-  color: #ffffff;
-  position: absolute;
-  left: 2px;
-  bottom: 0px;
-}
-.iconImg {
-  height: 380px;
-}
-.iconImg > div {
-  border-radius: 100%;
-  width: 280px;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-}
-.iconImg {
-  & > div:nth-child(1) {
-    margin-top: 75px;
-    background: #fff8b9;
-  }
-  & > div:nth-child(2) {
-    background: #e1f2ce;
-    margin: 0 35px;
-  }
-  & > div:nth-child(3) {
-    background: #bdecf8;
-    margin-bottom: 125px;
-  }
-}
-.opia {
-  width: 240px;
-  /* MB-Title */
-
-  font-family: 'Noto Sans CJK TC';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: 0.1em;
-  text-align: center;
-
-  /* Dark Grey */
-
-  color: #3e5270;
-}
-</style>
-
-<style lang="scss" scoped>
 @media (min-width: 768px) {
+  .iconHeader {
+    margin: 60px auto 0 auto;
+    /* PC-Title */
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    /* 白色 */
+
+    color: #3e5270;
+  }
+
+  .iconHeader > div:nth-child(1) {
+    position: relative;
+    width: 178px;
+    height: 50px;
+    background: #00a4ce;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  .iconHeader > div:nth-child(1) > span {
+    color: #ffffff;
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+  }
+  .iconImg {
+    height: 380px;
+  }
+  .iconImg > div {
+    border-radius: 100%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  .iconImg {
+    & > div:nth-child(1) {
+      margin-top: 75px;
+      background: #fff8b9;
+    }
+    & > div:nth-child(2) {
+      background: #e1f2ce;
+      margin: 0 35px;
+    }
+    & > div:nth-child(3) {
+      background: #bdecf8;
+      margin-bottom: 125px;
+    }
+  }
+  .opia {
+    width: 240px;
+    /* MB-Title */
+
+    font-family: 'Noto Sans CJK TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    /* Dark Grey */
+
+    color: #3e5270;
+  }
   .iconImgSm {
     display: none;
   }
 }
+</style>
+
+<style lang="scss" scoped>
 @media (max-width: 767px) {
   .Myopia {
     margin-bottom: 40px;

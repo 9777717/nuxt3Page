@@ -39,7 +39,7 @@
       flex-direction: row;
       align-content: space-between;
       box-sizing: border-box;
-      margin: 60px 492px;
+      margin: 60px 491px;
       margin-bottom: 40px;
       & > div {
         width: 400px;

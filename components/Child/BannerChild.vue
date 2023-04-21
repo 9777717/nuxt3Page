@@ -18,6 +18,7 @@
 @media (min-width: 768px) {
   .bannerChild {
     position: relative;
+
     & > div:nth-child(2) {
       position: absolute;
       top: 220px;
