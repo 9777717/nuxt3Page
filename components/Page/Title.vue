@@ -23,39 +23,42 @@ defineProps({
   </div>
 </template>
 <style scoped>
-.iconHeader {
-  margin: 83px auto 43px auto;
-  /* PC-Title */
+@media (min-width: 768px) {
+  .iconHeader {
+    margin: 83px auto 43px auto;
+    /* PC-Title */
 
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  letter-spacing: 0.1em;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1em;
 
-  /* 白色 */
+    /* 白色 */
 
-  color: #3e5270;
-}
+    color: #3e5270;
+  }
 
-.iconHeader > div:nth-child(1) {
-  position: relative;
-  width: 91px;
-  height: 48px;
-  background: #00a4ce;
-  box-sizing: border-box;
-  margin-top: 5px;
-}
-.iconHeader > div:nth-child(1) > span {
-  color: #ffffff;
-  position: absolute;
-  left: 2px;
-  bottom: 0px;
+  .iconHeader > div:nth-child(1) {
+    position: relative;
+    width: 91px;
+    height: 48px;
+    background: #00a4ce;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+
+  .iconHeader > div:nth-child(1) > span {
+    color: #ffffff;
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+  }
 }
 </style>
 <style lang="scss" scoped>
@@ -76,6 +79,7 @@ defineProps({
 
     color: #3e5270;
   }
+
   .iconHeader > div:nth-child(1) {
     position: relative;
     width: 56px;
@@ -84,9 +88,11 @@ defineProps({
     box-sizing: border-box;
     margin-top: 0;
   }
+
   .iconHeader > div:nth-child(1) > span {
     color: #ffffff;
   }
+
   .iconHeader > div:nth-child(2) {
     margin-left: 2px;
   }

@@ -4,6 +4,8 @@ components:
   theme_switcher:
     theme: theme
     change_theme: change theme
+  lenese:
+    misight_contact: 456
 pages:
   index:
     title: nuxt 3[]awesome[]starter

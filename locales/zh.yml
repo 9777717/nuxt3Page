@@ -4,6 +4,19 @@ components:
   theme_switcher:
     theme: 主题
     change_theme: 切换主题
+  lenese:
+    design: 设计
+    theory: 原理
+    detail: "角膜矯形術（Ortho-K，俗稱OK鏡）是一項非手術矯正視力方法，透過配戴特製的高透氧度硬性隱形眼鏡（角膜矯形鏡），以壓力慢慢改變角膜弧度，使角膜中央部分變得平坦，令外界光線重新聚焦到視網膜上，看見清晰的影像。由於角膜富有彈性，弧度改善並不持久，不能將近視徹底根治。一旦停戴，清晰視覺效果將會在數天內消失。因此需長期及定時在晚間戴上角膜矯形鏡（OK鏡），以維持清晰視覺的效果。"
+    detail_img_int: 另外，角膜形狀改變後，眼球聚焦事物時，中心影像會被聚焦在視網膜上，周邊影像則會被聚焦在視網膜的較前方，產生「周邊離焦」，有效預防眼軸變長，從而減慢近視及散光加深速度。
+    serve_lenese: 服务
+    matter_lenese: 内容
+    eye_examination : 綜合眼睛檢查
+    eye_suitability: 角膜矯形鏡(OK鏡)合適性檢查
+    eye_teaching: 詳細配戴鏡片教學
+    eye_customized: 角膜矯形鏡片(OK鏡)訂製
+    eye_necessary: 1年內6次必要覆診
+    eye_products: 隱形眼鏡護理用品
 pages:
   index:
     title: nuxt 3[]awesome[]starter
