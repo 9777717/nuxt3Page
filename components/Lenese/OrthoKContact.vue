@@ -56,6 +56,36 @@ const courseOftreatment = [
     text: '需更換全新鏡片',
   },
 ]
+const wayOfwearing = [
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/7a4f66bdae773f5b.png',
+    text: '使用抗菌洗手液徹底清潔雙手及抹乾雙手',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/96125031617caa63.png',
+    text: '以人工淚液（不含防腐劑）濕潤雙眼',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/944e387dc9af330a.png',
+    text: '取出OK鏡，以生理鹽水清洗乾淨',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/617894849159c7a2.png',
+    text: '把OK鏡放在食指或手心上，滴數滴生理鹽水或人工淚液，濕潤鏡片凹面',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/2b55fa5ad6626fff.png',
+    text: '在鏡子前，輕輕拉起上下眼瞼，把OK鏡放在眼睛上',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/79704f3323fbead6.png',
+    text: '放到眼睛後，眼睛向下看，鬆開眼瞼，稍微閉上眼睛，再保持正常眨眼，確保鏡片已在角膜中央位置',
+  },
+  {
+    img: 'https://static.cmereye.com/imgs/2023/04/0f5de2d55b27bf9a.png',
+    text: '再以人工淚液（不含防腐劑）濕潤雙眼',
+  },
+]
 </script>
 <template>
   <div class="OrthoKContact">
@@ -71,14 +101,16 @@ const courseOftreatment = [
         <p>Ortho-K</p>
       </div>
     </div>
-    <!-- <PageRhomboidTop
+    <PageRhomboidTop
       :style-rhom="{
-        top: '650px',
-        height: '342px',
+        top: '1260px',
+        height: '100%',
+        width: '100%',
         transform: 'skewY(348deg)',
-        background: '#fff',
+        background:
+          'url(https://static.cmereye.com/imgs/2023/04/bdeb716f38d3020f.png) no-repeat',
       }"
-    /> -->
+    />
     <div class="navLenese">
       <div>
         <!-- 设计原理 -->
@@ -218,10 +250,44 @@ const courseOftreatment = [
             </div>
             <div>分享</div>
           </div>
-          <div></div>
+          <div>
+            <iframe
+              width="884"
+              height="500"
+              src="https://www.youtube.com/embed/J5tfqyp-lQQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
         <!-- 配戴時間及方法 -->
-        <div>配戴時間及方法</div>
+        <div>
+          <div>
+            <div class="iconHeader">
+              <div>
+                <span>配戴</span>
+              </div>
+              <div>時間及方法</div>
+            </div>
+          </div>
+          <div>
+            <div>
+              每晚需配戴鏡片約7-10小時。
+              鏡片可每晚配戴，或按視光師的個別指示每星期休息1至2晚。角膜矯形鏡（OK鏡）的透氧度非常高，經權威機構驗證如美國FDA及日本厚生勞動省驗證，適合在夜間睡覺時配戴。翌日起床後摘除，便能一整天保持清晰視力，替代日間的近視眼鏡或隱形眼鏡。
+            </div>
+            <div>
+              <div v-for="(sonNode, index) in wayOfwearing" :key="sonNode.img">
+                <div>{{ index + 1 }}</div>
+                <div>
+                  <img :src="sonNode.img" alt="" />
+                </div>
+                <div>{{ sonNode.text }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div></div>
     </div>
@@ -235,6 +301,7 @@ const courseOftreatment = [
   }
 
   .miCoypright {
+    z-index: 100;
     position: relative;
 
     & > div:nth-child(3) {
@@ -261,9 +328,11 @@ const courseOftreatment = [
   }
 
   .navLenese {
+    position: relative;
     width: 884px;
     margin: 0 auto;
-    position: relative;
+    margin-top: -230px;
+    z-index: 100;
 
     // 以下是是设计原理的样式布局
     & > div:nth-child(1) > div:nth-child(1) {
@@ -542,6 +611,7 @@ const courseOftreatment = [
       }
     }
 
+    // 達致效果
     & > div:nth-child(1) > div:nth-child(4) {
       & > div:nth-child(2) {
         background: #fff;
@@ -686,6 +756,7 @@ const courseOftreatment = [
       }
     }
 
+    // 真實案例分享
     & > div:nth-child(1) > div:nth-child(5) {
       .iconHeader {
         margin: 83px auto 43px auto;
@@ -727,7 +798,141 @@ const courseOftreatment = [
         background: #fff;
         margin-bottom: 87px;
         border-radius: 5px;
+        // 视频没有阴影
+        // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    // 配戴時間及方法
+    & > div:nth-child(1) > div:nth-child(6) {
+      .iconHeader {
+        margin: 83px auto 43px auto;
+        /* PC-Title */
+
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.1em;
+
+        /* 白色 */
+
+        color: #3e5270;
+      }
+
+      .iconHeader > div:nth-child(1) {
+        position: relative;
+        width: 91px;
+        height: 48px;
+        background: #00a4ce;
+        box-sizing: border-box;
+        margin-top: 5px;
+      }
+
+      .iconHeader > div:nth-child(1) > span {
+        color: #ffffff;
+        position: absolute;
+        left: 2px;
+        bottom: 0px;
+      }
+
+      & > div:nth-child(2) {
+        background: #fff;
+        margin-bottom: 58px;
+        border-radius: 5px;
+        padding: 33.52px 63px 51px 79px;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+
+        & > div:nth-child(1) {
+          font-family: 'Noto Sans CJK TC';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 32px;
+          /* or 200% */
+
+          text-align: justify;
+
+          /* Dark Grey */
+
+          color: #3e5270;
+        }
+
+        & > div:nth-child(2) {
+          margin-top: 54px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          & > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 18px;
+
+            & > div:nth-child(1) {
+              font-family: 'Noto Sans';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 40px;
+              line-height: 54px;
+              display: flex;
+              align-items: center;
+              text-align: justify;
+
+              /* Pale Blue */
+
+              color: #c2eaf2;
+            }
+
+            & > div:nth-child(1) {
+              & > img {
+                width: 100%;
+              }
+            }
+
+            & > div:nth-child(2) {
+              margin-left: 16px;
+              margin-right: 34px;
+            }
+
+            & > div:nth-child(3) {
+              width: 482px;
+              font-family: 'Noto Sans CJK TC';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 40px;
+              /* or 200% */
+
+              display: flex;
+              align-items: center;
+
+              /* Dark Grey */
+
+              color: #3e5270;
+
+              /* Inside auto layout */
+
+              flex: none;
+              order: 0;
+              flex-grow: 0;
+            }
+          }
+
+          & > div:nth-child(2n) > div:nth-child(1) {
+            color: #00a4ce;
+          }
+
+          & > div:last-child {
+            margin-bottom: 0px;
+          }
+        }
       }
     }
   }
